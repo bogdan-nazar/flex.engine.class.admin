@@ -1,0 +1,2298 @@
+body {
+	font-size:12px;
+	font-family:Tahoma,Arial,serif;
+}
+.admin {}
+/* --------------------------------------------------- */
+/* ---------------- форма авторизации ---------------- */
+.admin .login-box {
+	position:absolute;
+	width:100%;
+	top:0;
+	bottom:0;
+	margin:0 auto;
+	text-align:center;
+}
+.admin .login-box .aligner {
+	display:inline-block;
+	vertical-align:middle;
+	height:100%;
+}
+.admin .login-box .inner {
+	display:inline-block;
+	width:333px;
+	height:352px;
+	padding:58px 76px 0 76px;
+	color:#ebebeb;
+	font:12px Arial, Helvetica, sans-serif;
+	background:url('{$modTplDir}images/login-box/bg-login.png') no-repeat left top;
+	text-align:left;
+	vertical-align:middle;
+}
+.admin .login-box img {
+	border:none;
+}
+.admin .login-box h2 {
+	padding:0;
+	margin:0;
+	color:#ebebeb;
+	font:bold 44px "Calibri", Arial;
+}
+.admin .login-box input:focus[type="text"], .admin .login-box input:focus[type="password"] {
+	outline-offset:-2px;
+	outline-style:solid;
+	outline-width:1px;
+	outline-color:#db903a;
+}
+.admin .login-box .title {
+	float:left;
+	display:inline;
+	width:80px;
+	text-align:right;
+	padding:14px 10px 0 0;
+	margin:0 0 7px 0;
+	color:#ebebeb;
+}
+.admin .login-box .field {
+	float: left;
+	display:inline;
+	width:230px;
+	margin:0;
+	margin:0 0 7px 0;
+}
+.admin .login-box .input {
+	width:205px;
+	padding:10px 4px 6px 3px;
+	border:1px solid #0d2c52;
+	background-color:#1e4f8a;
+	font-size:16px;
+	color:#ebebeb;
+}
+.admin .login-box .input.err, .admin .login-box .input.err:focus {
+	outline-offset:-2px;
+	outline-style:solid;
+	outline-width:1px;
+	outline-color:#b42634;
+}
+.admin .login-box .options  {
+	clear:both;
+	padding-left:87px;
+	font-size:11px;
+}
+.admin .login-box .options a {
+	color:#ebebeb;
+	font-size:11px;
+}
+.admin .login-box .btn {
+	float:left;
+	margin-left:90px;
+	width:103px;
+	height:42px;
+	background: url('{$modTplDir}images/login-box/btn-login.png') left top no-repeat;
+	cursor:pointer;
+}
+.admin .admin-main {
+	min-height:100%;
+	height:auto !important;
+	height:100%;
+	width:100%;
+	margin:0 auto;
+	background-color:#fff;
+}
+/* --------------------------------------------------- */
+/* ------------ левая колонка, кнопки меню ----------- */
+.admin .admin-main .admin-leftcol {
+	position:fixed;
+	left:0;
+	top:0;
+	bottom:0;
+	width:199px;
+	border-right:1px solid #ddd;
+	background-color:#f4f4f4;
+	padding-top:90px;
+}
+.admin .admin-main .admin-leftcol .session {
+	padding:5px 0 20px 10px;
+	color:#555;
+	font-size:12px;
+}
+.admin .admin-main .admin-leftcol .logoff {
+	display:inline-block;
+	color:#555;
+	cursor:pointer;
+}
+.admin .admin-main .admin-leftcol .logoff:hover {
+	color:#333;
+	text-decoration:underline;
+}
+.admin .admin-main .admin-leftcol .asect-btn {
+	border-bottom:1px solid lightGrey;
+	border-top:1px solid white;
+	overflow:hidden;
+}
+.admin .admin-main .admin-leftcol .asect-btn * {
+	cursor:pointer;
+}
+.admin .admin-main .admin-leftcol .asect-btn:hover {
+	background-color:#fff;
+}
+.admin .admin-main .admin-leftcol .asect-btn .icons {
+	background-image:url('{$modTplDir}images/sect-icns.png');
+}
+.admin .admin-main .admin-leftcol .asect-btn .icons.icon {
+	float:left;
+	width:24px;
+	height:24px;
+	background-position:left top;
+	background-repeat:no-repeat;
+	background-size:100% auto;
+}
+.admin .admin-main .admin-leftcol .asect-btn.asect-intro .icon {
+	background-position:left top;
+}
+.admin .admin-main .admin-leftcol .asect-btn.asect-content .icon {
+	background-position:left -24px;
+}
+.admin .admin-main .admin-leftcol .asect-btn.asect-media .icon {
+	background-position:left -48px;
+}
+.admin .admin-main .admin-leftcol .asect-btn.asect-modules .icon {
+	background-position:left -72px;
+}
+.admin .admin-main .admin-leftcol .asect-btn.asect-settings .icon {
+	background-position:left -96px;
+}
+.admin .admin-main .admin-leftcol .asect-btn.asect-stat .icon {
+	background-position:left -120px;
+}
+.admin .admin-main .admin-leftcol .asect-btn.asect-system .icon {
+	background-position:left -144px;
+}
+.admin .admin-main .admin-leftcol .asect-btn.asect-help .icon {
+	background-position:left -168px;
+}
+.admin .admin-main .admin-leftcol .asect-btn .title {
+	padding:2px 15px 0 0;
+	margin-left:30px;
+	color:#0b55c4;
+	font-size:16px;
+	text-align:right;
+}
+.admin .admin-main .admin-leftcol .asect-btn.act .title,
+.admin .admin-main .admin-leftcol .asect-btn:hover .title {
+	color:#ff6815;
+}
+/* --------------------------------------------------- */
+/* ---------------- верхняя растяжка ----------------- */
+.admin .admin-main .admin-bar {
+	position:fixed;
+	left:0;
+	top:0;
+	right:0;
+	height:59px;
+	width:100%;
+	padding:10px 10px 10px 10px;
+	background:url('{$modTplDir}images/bg-bar.png');
+	color:#fff;
+	z-index:1000;
+}
+.admin .admin-main .admin-bar .goindex {
+	color:#fff;
+}
+/* --------------------------------------------------- */
+/* ---------------- контентная часть ----------------- */
+.admin .admin-main .admin-workarea {
+	padding:80px 15px 0 215px;
+}
+.admin .admin-main .admin-workarea .section {
+	border:1px solid #ccc;
+	border-radius:6px;
+	background:url('{$modTplDir}images/bg-page-header.png') top left repeat-x;
+	min-height:300px;
+}
+.admin .admin-main .admin-workarea .section .section-title {
+	height:50px;
+	padding-top:5px;
+	-moz-border-radius-topright:5px;
+	-moz-border-radius-topleft:5px;
+	border-top-left-radius:5px;
+	border-top-right-radius:5px;
+}
+.admin .admin-main .admin-workarea .section .section-title .icon {
+	float:left;
+	width:50px;
+	height:24px;
+	background:url('{$modTplDir}images/icn-page.png') center no-repeat;
+}
+.admin .admin-main .admin-workarea .section .section-title .text {
+	padding:2px 0 0 0;
+	margin-left:50px;
+	font-size:17px;
+}
+.admin .admin-main .admin-workarea .section .section-title .root {
+	font-size:17px;
+	cursor:pointer;
+}
+.admin .admin-main .admin-workarea .section .section-inner {
+	height:1000px;
+	padding:0 10px;
+	overflow:hidden;
+}
+/* ----------------------------------------------- */
+/* --- стандартные кнопки управления разделом ---- */
+.admin .admin-main .admin-workarea .section .section-inner .admin-control {
+	display:none;
+	float:left;
+	width:34px;
+	position:fixed;
+	border:1px solid #dfe1da;
+	background:url('{$modTplDir}images/bg-control.png') left top no-repeat #fff;
+	padding-top:18px;
+}
+.admin .admin-main .admin-workarea .section.icn32 .section-inner .admin-control {
+	width:46px;
+}
+.admin .admin-main .admin-workarea .section.icn48 .section-inner .admin-control {
+	width:58px;
+}
+.admin .admin-main .admin-workarea .section.hasmode .section-inner .admin-control {
+	display:block;
+}
+#admin-section-control .btn {
+	width:24px;
+	height:24px;
+	margin:0 auto;
+	cursor:pointer;
+	background:url('{$modTplDir}images/controls.png') left top no-repeat;
+	margin-bottom:5px;
+}
+#admin-section-control .btn:hover {
+	background-position:left -24px;
+}
+#admin-section-control .btn.add,
+#admin-section-control .btn.new {
+	background-position:-24px top;
+}
+#admin-section-control .btn.add:hover,
+#admin-section-control .btn.new:hover {
+	background-position:-24px -24px;
+}
+#admin-section-control .btn.blocks,
+#admin-section-control .btn.spots {
+	background-position:-48px top;
+}
+#admin-section-control .btn.blocks:hover,
+#admin-section-control .btn.spots:hover {
+	background-position:-48px -24px;
+}
+#admin-section-control .btn.commit,
+#admin-section-control .btn.apply {
+	background-position:-72px top;
+}
+#admin-section-control .btn.commit:hover,
+#admin-section-control .btn.apply:hover {
+	background-position:-72px -24px;
+}
+#admin-section-control .btn.delete,
+#admin-section-control .btn.del,
+#admin-section-control .btn.empty {
+	background-position:-96px top;
+}
+#admin-section-control .btn.delete:hover,
+#admin-section-control .btn.del:hover,
+#admin-section-control .btn.empty:hover {
+	background-position:-96px -24px;
+}
+#admin-section-control .btn.exit {
+	background-position:-120px top;
+}
+#admin-section-control .btn.exit:hover {
+	background-position:-120px -24px;
+}
+#admin-section-control .btn.install {
+	background-position:-144px top;
+}
+#admin-section-control .btn.install:hover {
+	background-position:-144px -24px;
+}
+#admin-section-control .btn.invert,
+#admin-section-control .btn.state {
+	background-position:-168px top;
+}
+#admin-section-control .btn.invert:hover,
+#admin-section-control .btn.state:hover {
+	background-position:-168px -24px;
+}
+#admin-section-control .btn.list,
+#admin-section-control .btn.lvlup {
+	background-position:-192px top;
+}
+#admin-section-control .btn.list:hover,
+#admin-section-control .btn.lvlup:hover {
+	background-position:-192px -24px;
+}
+#admin-section-control .btn.save,
+#admin-section-control .btn.save-exit {
+	background-position:-216px top;
+}
+#admin-section-control .btn.save:hover,
+#admin-section-control .btn.save-exit:hover {
+	background-position:-216px -24px;
+}
+/* ------------------------------------------------------ */
+/* ------ стандартные стили таблиц, полей и кнопок ------ */
+.admin .admin-main .admin-workarea .section.hasmode .section-inner .admin-data {
+	margin-left:47px;
+}
+.admin .admin-main .admin-workarea .section .section-inner .admin-data .filters select {
+	max-width:120px;
+}
+.admin .admin-main .admin-workarea .section .section-inner .admin-data .admin-table {
+	margin:0 0 10px 0;
+	width:100%;
+	font-size:12px;
+}
+.admin .admin-main .admin-workarea .section .section-inner .admin-data .admin-table thead {
+	height:35px;
+	background:url('{$modTplDir}images/bg-table-head.gif') top left repeat-x;
+	text-align:left;
+}
+.admin .admin-main .admin-workarea .section .section-inner .admin-data .admin-table tbody tr:hover {
+	background-color:#eeefeb;
+}
+.admin .admin-main .admin-workarea .section .section-inner .admin-data .admin-table td.date {
+	font-size:11px;
+}
+.admin .admin-main .admin-workarea .section .section-inner .admin-data span.admin-go {
+	cursor:pointer;
+	display:inline-table;
+	padding:2px 0 2px 20px;
+}
+.admin .admin-main .admin-workarea .section .section-inner .admin-data span.admin-go:hover {
+	background:url('{$modTplDir}images/act-go.png') left center no-repeat;
+	color:#0b55c4;
+}
+.admin .admin-main .admin-workarea .section .section-inner .admin-data span.admin-tune {
+	cursor:pointer;
+	display:inline-table;
+	padding:2px 0 2px 20px;
+	color:#00853f;
+	background:url('{$modTplDir}images/icn-tune.png') left -17px no-repeat;
+}
+.admin .admin-main .admin-workarea .section .section-inner .admin-data span.admin-tune:hover {
+	background:url('{$modTplDir}images/icn-tune.png') left top no-repeat;
+	color:#0b55c4;
+}
+.admin .admin-main .admin-workarea .section .section-inner .admin-data span.admin-tune.off {
+	color:red;
+}
+.admin .admin-main .admin-workarea .section .section-inner .admin-data span.admin-sys {
+	color:#dfe1da;
+}
+.admin .admin-main .admin-workarea .section .section-inner .admin-data span.admin-systune {
+	display:inline-table;
+	padding:2px 0 2px 20px;
+	color:#dfe1da;
+	background:url('{$modTplDir}images/icn-tune.png') left -34px no-repeat;
+}
+.admin .admin-main .admin-workarea .section .section-inner .admin-data .field-has-btn {
+	overflow:hidden;
+}
+.admin .admin-main .admin-workarea .section .section-inner .admin-data .field-has-btn .field-btn {
+	display:inline-block;
+	width:22px;
+	height:22px;
+	margin-left:5px;
+	overflow:hidden;
+	background-repeat:no-repeat;
+	background-position:center;
+	vertical-align:top;
+}
+.admin .admin-main .admin-workarea .section .section-inner .admin-data .field-has-btn .field-btn.gen {
+	cursor:pointer;
+	background-image:url('{$modTplDir}images/sect-content-check-icns.png');
+	background-size:100% auto;
+	background-position:left top;
+}
+.admin .admin-main .admin-workarea .section .section-inner .admin-data .field-has-btn .field-btn.check {
+	cursor:pointer;
+	background-image:url('{$modTplDir}images/sect-content-check-icns.png');
+	background-size:100% auto;
+	background-position:left -22px;
+}
+.admin .admin-main .admin-workarea .section .section-inner .admin-data .field-has-btn .field-btn.ok {
+	background-image:url('{$modTplDir}images/sect-content-check-icns.png');
+	background-size:100% auto;
+	background-position:left -44px;
+}
+.admin .admin-main .admin-workarea .section .section-inner .admin-data .field-has-btn .field-btn.err {
+	background-image:url('{$modTplDir}images/sect-content-check-icns.png');
+	background-size:100% auto;
+	background-position:left -66px;
+}
+.admin .admin-main .admin-workarea .section .section-inner .admin-data .field-has-btn .field-btn.gen:hover,
+.admin .admin-main .admin-workarea .section .section-inner .admin-data .field-has-btn .field-btn.check:hover {
+	outline-width:1px; /* firefox */
+	outline:auto -webkit-focus-ring-color; /* chrome */
+	outline-color:#76a5ec; /* chrome - перезапись цвета webkit */
+}
+.admin .admin-main .admin-workarea .section .section-inner .admin-data input[type="text"] {
+	border:1px solid #8799b4;
+	outline:0 solid #76a5ec;
+	margin:0;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	-khtml-border-radius:3px;
+  	border-radius:3px;
+	padding:2px;
+}
+.admin .admin-main .admin-workarea .section .section-inner .admin-data input:focus[type="text"] {
+	-moz-outline-radius:3px; /* firefox */
+	outline-width:1px; /* firefox */
+	outline:3px auto -webkit-focus-ring-color; /* chrome */
+	outline-color:#76a5ec; /* chrome - перезапись цвета webkit */
+}
+/* ------------------------------------------------ */
+/* ----------- стили для раздела Контент ---------- */
+.admin .admin-main .admin-workarea .section.content .content-list .filters {
+	padding-bottom:10px;
+}
+.admin .admin-main .admin-workarea .section.content .content-list .filters input[type="checkbox"] {
+	vertical-align:middle;
+}
+.admin .admin-main .admin-workarea .section.content .content-list table td.admin-quick,
+.admin .admin-main .admin-workarea .section.content .content-list table td.admin-del {
+	width:24px;
+	text-align:center;
+}
+.admin .admin-main .admin-workarea .section.content .content-list table td.admin-quick span {
+	display:inline-block;
+	width:24px;
+	height:24px;
+	overflow:hidden;
+	background:url('{$modTplDir}images/icn-edit.png') left top no-repeat;
+	cursor:pointer;
+}
+.admin .admin-main .admin-workarea .section.content .content-list table td.admin-del span {
+	display:inline-block;
+	width:24px;
+	height:24px;
+	overflow:hidden;
+	background:url('{$modTplDir}images/icn-del.png') left top no-repeat;
+	cursor:pointer;
+}
+.admin .admin-main .admin-workarea .section.content .content-list table td.admin-del span:hover {
+	background-position:left -36px;
+}
+.admin .admin-main .admin-workarea .section.content .content-list .pager {
+	padding:10px 0 15px 0;
+	border-top:1px solid #e6edf5;
+}
+.admin .admin-main .admin-workarea .section.content .content-list .pager span.page-go {
+	display:inline-block;
+	padding:0 10px 0 0;
+	font-size:12px;
+	text-decoration:underline;
+	color:#0b55c4;
+	cursor:pointer;
+}
+.admin .admin-main .admin-workarea .section.content .content-list .pager span.page-go.pact {
+	font-size:14px;
+	font-weight:bold;
+}
+/* create page popup */
+.admin .content-list-create {
+	width:600px;
+	padding:15px 30px 20px 30px;
+	line-height:150%;
+	text-align:left;
+	background-color:#fff;
+	-webkit-box-shadow:3px 3px 15px #222;
+	-moz-box-shadow:3px 3px 15px #222;
+	box-shadow:3px 3px 15px #222;
+}
+.admin .content-list-create .title {
+	min-height:21px;
+	margin-bottom:20px;
+	font-weight:bold;
+	font-size:14px;
+	background:url('{$modTplDir}images/bg-table-head.gif') left top repeat-x;
+}
+.admin .content-list-create .field-has-btn {
+	overflow:hidden;
+}
+.admin .content-list-create .field-has-btn .field-btn {
+	display:inline-block;
+	width:22px;
+	height:22px;
+	margin-left:5px;
+	overflow:hidden;
+	background-repeat:no-repeat;
+	background-position:center;
+	vertical-align:top;
+}
+.admin .content-list-create .field-has-btn .field-btn.gen {
+	cursor:pointer;
+	background-image:url('{$modTplDir}images/sect-content-check-icns.png');
+	background-size:100% auto;
+	background-position:left top;
+}
+.admin .content-list-create .field-has-btn .field-btn.check {
+	cursor:pointer;
+	background-image:url('{$modTplDir}images/sect-content-check-icns.png');
+	background-size:100% auto;
+	background-position:left -22px;
+}
+.admin .content-list-create .field-has-btn .field-btn.ok {
+	background-image:url('{$modTplDir}images/sect-content-check-icns.png');
+	background-size:100% auto;
+	background-position:left -44px;
+}
+.admin .content-list-create .field-has-btn .field-btn.err {
+	background-image:url('{$modTplDir}images/sect-content-check-icns.png');
+	background-size:100% auto;
+	background-position:left -66px;
+}
+.admin .content-list-create .field-has-btn .field-btn.gen:hover,
+.admin .content-list-create .field-has-btn .field-btn.check:hover {
+	outline-width:1px; /* firefox */
+	outline:auto -webkit-focus-ring-color; /* chrome */
+	outline-color:#76a5ec; /* chrome - перезапись цвета webkit */
+}
+.admin .content-list-create input[type="text"] {
+	display:inline-block;
+	vertical-align:top;
+	width:550px;
+	padding:2px;
+	outline:0;
+	margin:0;
+	border:1px solid #bcbcbc;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	-khtml-border-radius:3px;
+  	border-radius:3px;
+}
+.admin .content-list-create .silent-err-msg {
+	padding:10px 0;
+	color:#ff0000;
+}
+.admin .content-list-create .btns {
+	padding-top:10px;
+	font-size:0;
+	line-height:0;
+	text-align:center;
+}
+.admin .content-list-create .btns a.btn {
+	display:inline-block;
+	width:120px;
+	border:1px solid #bcbcbc;
+	background-color:#fff;
+	vertical-align:top;
+}
+.admin .content-list-create .btns a.btn:hover {
+	background-color:#f0f0f0;
+}
+.admin .content-list-create .btns a.btn:hover span {
+	color:#0b55c4;
+}
+.admin .content-list-create .btns a.btn span {
+	display:inline-block;
+	margin-top:-1px;
+	line-height:normal;
+	font-size:12px;
+	font-family:Tahoma,Arial,serif;
+	text-align:center;
+	text-decoration:none;
+	color:#363636;
+}
+.admin .content-list-create .btns a.btn span.alnr {
+	width:0;
+	height:22px;
+	margin:0;
+	overflow:hidden;
+}
+.admin .content-list-create .btns a.btn * {
+	vertical-align:middle;
+}
+.admin .content-list-create .btns .sp {
+	display:inline-block;
+	width:20px;
+	height:24px;
+	vertical-align:top;
+}
+/* quick edit page popup */
+.admin .content-list-quick {
+	width:600px;
+	padding:15px 30px 20px 30px;
+	line-height:150%;
+	text-align:left;
+	background-color:#fff;
+	-webkit-box-shadow:3px 3px 15px #222;
+	-moz-box-shadow:3px 3px 15px #222;
+	box-shadow:3px 3px 15px #222;
+}
+.admin .content-list-quick .title {
+	min-height:21px;
+	margin-bottom:20px;
+	font-weight:bold;
+	font-size:14px;
+	background:url('{$modTplDir}images/bg-table-head.gif') left top repeat-x;
+}
+.admin .content-list-quick .field-has-btn {
+	overflow:hidden;
+}
+.admin .content-list-quick .field-has-btn .field-btn {
+	display:inline-block;
+	width:22px;
+	height:22px;
+	margin-left:5px;
+	overflow:hidden;
+	background-repeat:no-repeat;
+	background-position:center;
+	vertical-align:top;
+}
+.admin .content-list-quick .field-has-btn .field-btn.gen {
+	cursor:pointer;
+	background-image:url('{$modTplDir}images/sect-content-check-icns.png');
+	background-size:100% auto;
+	background-position:left top;
+}
+.admin .content-list-quick .field-has-btn .field-btn.check {
+	cursor:pointer;
+	background-image:url('{$modTplDir}images/sect-content-check-icns.png');
+	background-size:100% auto;
+	background-position:left -22px;
+}
+.admin .content-list-quick .field-has-btn .field-btn.ok {
+	background-image:url('{$modTplDir}images/sect-content-check-icns.png');
+	background-size:100% auto;
+	background-position:left -44px;
+}
+.admin .content-list-quick .field-has-btn .field-btn.err {
+	background-image:url('{$modTplDir}images/sect-content-check-icns.png');
+	background-size:100% auto;
+	background-position:left -66px;
+}
+.admin .content-list-quick .field-has-btn .field-btn.gen:hover,
+.admin .content-list-quick .field-has-btn .field-btn.check:hover {
+	outline-width:1px; /* firefox */
+	outline:auto -webkit-focus-ring-color; /* chrome */
+	outline-color:#76a5ec; /* chrome - перезапись цвета webkit */
+}
+.admin .content-list-quick input[type="text"] {
+	display:inline-block;
+	vertical-align:top;
+	width:550px;
+	padding:2px;
+	outline:0;
+	margin:0;
+	border:1px solid #bcbcbc;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	-khtml-border-radius:3px;
+  	border-radius:3px;
+}
+.admin .content-list-quick .switches {
+	overflow:hidden;
+}
+.admin .content-list-quick .switches .item {
+	float:left;
+}
+.admin .content-list-quick .switches .switch {
+	cursor:pointer;
+	padding:0 10px 0 5px;
+	width:25px;
+	font-weight:bold;
+}
+.admin .content-list-quick .switches .switch:hover {
+	text-decoration:underline;
+}
+.admin .content-list-quick .switches .switch.off {
+	color:#ff0000;
+}
+.admin .content-list-quick .field-title {
+	padding:20px 0 5px 0;
+}
+.admin .content-list-quick .silent-err-msg {
+	padding:10px 0;
+}
+.admin .content-list-quick .silent-err-msg.err {
+	color:#ff0000;
+}
+.admin .content-list-quick .silent-err-msg.render-loader {
+	padding-left:25px;
+	background-position:left center;
+	background-repeat:no-repeat;
+}
+.admin .content-list-quick .btns {
+	padding-top:10px;
+	font-size:0;
+	line-height:0;
+	text-align:center;
+}
+.admin .content-list-quick .btns a.btn {
+	display:inline-block;
+	width:120px;
+	border:1px solid #bcbcbc;
+	background-color:#fff;
+	vertical-align:top;
+}
+.admin .content-list-quick .btns a.btn:hover {
+	background-color:#f0f0f0;
+}
+.admin .content-list-quick .btns a.btn:hover span {
+	color:#0b55c4;
+}
+.admin .content-list-quick .btns a.btn span {
+	display:inline-block;
+	margin-top:-1px;
+	line-height:normal;
+	font-size:12px;
+	font-family:Tahoma,Arial,serif;
+	text-align:center;
+	text-decoration:none;
+	color:#363636;
+}
+.admin .content-list-quick .btns a.btn span.alnr {
+	width:0;
+	height:22px;
+	margin:0;
+	overflow:hidden;
+}
+.admin .content-list-quick .btns a.btn * {
+	vertical-align:middle;
+}
+.admin .content-list-quick .btns .sp {
+	display:inline-block;
+	width:20px;
+	height:24px;
+	vertical-align:top;
+}
+/* page edit mode */
+.admin .admin-main .admin-workarea .section.content .content-edit {
+	padding:10px 0 20px 0;
+}
+.admin .admin-main .admin-workarea .section.content .content-edit input[type="text"] {
+	width:50%;
+}
+.admin .admin-main .admin-workarea .section.content .content-edit .switches {
+	overflow:hidden;
+}
+.admin .admin-main .admin-workarea .section.content .content-edit .switches .item {
+	float:left;
+}
+.admin .admin-main .admin-workarea .section.content .content-edit .switches .switch {
+	cursor:pointer;
+	padding:0 10px 0 5px;
+	width:25px;
+	font-weight:bold;
+}
+.admin .admin-main .admin-workarea .section.content .content-edit .switches .switch:hover {
+	text-decoration:underline;
+}
+.admin .admin-main .admin-workarea .section.content .content-edit .switches .switch.off {
+	color:#ff0000;
+}
+.admin .admin-main .admin-workarea .section.content .content-edit .field-title {
+	padding:20px 0 5px 0;
+}
+.admin .admin-main .admin-workarea .section.content .content-edit .morebtns {
+	padding-bottom:5px;
+	overflow:hidden;
+}
+.admin .admin-main .admin-workarea .section.content .content-edit .morebtns .fupload {
+	float:left;
+	height:15px;
+	padding:4px 5px 5px 25px;
+	border:1px solid #bcbcbc;
+	font-size:12px;
+	background-color:#fff;
+	background-repeat:no-repeat;
+	background-position:left center;
+}
+.admin .admin-main .admin-workarea .section.content .content-edit .morebtns .fupload.ready {
+	background:url('{$modTplDir}images/icn-upload.png') 3px 3px no-repeat;
+	cursor:pointer;
+}
+.admin .admin-main .admin-workarea .section.content .content-edit .morebtns .fupload.ready:hover {
+	background-position:3px -19px;
+	background-color:#f0f0f0;
+}
+.admin .admin-main .admin-workarea .section.content .content-edit .moreopts {
+	padding-bottom:50px;
+}
+.admin .admin-main .admin-workarea .section.content .content-edit .body {
+	outline:0 solid #76a5ec;
+	border:1px solid #8799b4;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	-khtml-border-radius:3px;
+	border-radius:3px;
+	padding:2px;
+	cursor:pointer;
+	width:80%;
+	min-height:400px;
+	overflow:hidden;
+}
+.admin .admin-main .admin-workarea .section.content .content-edit .body:focus {
+	-moz-outline-radius:3px;
+	-webkit-outline-radius:3px;
+	-khtml-outline-radius:3px;
+	outline-width:1px;
+	outline:3px auto -webkit-focus-ring-color;
+	outline-color:#76a5ec;
+	cursor:auto;
+}
+/* ------------------------------------------------ */
+/* ---------- стили для медиа-библиотеки ---------- */
+.admin .media {}
+.admin .media.inline {
+	background-color:#888;
+	border:1px solid #888;
+	-moz-border-radius:3px;
+	-khtml-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	min-width:620px;
+	width:800px;
+	padding:5px;
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:12px;
+	text-align:left;
+}
+.admin .media.modal {
+	width:400px;
+	min-width:400px;
+	padding:5px;
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:12px;
+	text-align:left;
+}
+.admin .media-title {
+	border-top:1px solid #ccc;
+	border-right:1px solid #ccc;
+	border-left:1px solid #ccc;
+	-moz-border-radius-topright:5px;
+	-moz-border-radius-topleft:5px;
+	border-top-left-radius:5px;
+	border-top-right-radius:5px;
+	height:21px;
+	padding:2px 30px 0 7px;
+	margin-bottom:3px;
+	background:url('{$modTplDir}images/media/bg-tit.gif') left top repeat-x;
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:12px;
+	text-align:left;
+}
+.admin .media-title span.tinner {
+	display:inline-block;
+	padding:2px 0 0 22px;
+	height:18px;
+	font-size:14px;
+	font-weight:bold;
+	color:#3c637c;
+	background:url('{$modTplDir}images/media/folder.png') left top no-repeat;
+}
+.admin .media-title, .admin .media-title *, .admin .media, .admin .media * {
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  -o-user-select:none;
+  user-select:none;
+}
+.admin .media .tabs-btns-rel {
+	position:relative;
+	height:30px;
+	padding:0 5px;
+	overflow:hidden;
+}
+.admin .media .tabs-btns-rel .tabs-btns {
+	position:absolute;
+	height:32px;
+	width:3000px;
+	text-align:left;
+}
+.admin .media .tabs-btns-rel .tabs-btns .tab-btn {
+	display:inline-block;
+	height:23px;
+	padding:5px 8px 0 8px;
+	border:1px solid #297bf6;
+	-moz-border-radius:3px;
+	border-radius:3px;
+	margin-right:4px;
+	color:#ebebeb;
+	background-color:#356ec2;
+	text-align:center;
+	font-size:12px;
+	font-family:Arial, Helvetica, sans-serif;
+	cursor:pointer;
+}
+.admin .media .tabs-btns-rel .tabs-btns .tab-btn.dis {
+	border:1px solid #717a88;
+	color:#d6d6d6;
+	background-color:#6981a3;
+	cursor:default;
+}
+.admin .media .tabs-btns-rel .tabs-btns .tab-btn.act {
+	border:1px solid #e9ebe5;
+	color:#0b55c4;
+	background-color:#e9ebe5;
+	background: -webkit-linear-gradient(to bottom, #fff, #e9ebe5);
+	background: -o-linear-gradient(to bottom, #fff, #e9ebe5);
+	background: -moz-linear-gradient(to bottom, #fff, #e9ebe5);
+	background: linear-gradient(to bottom, #fff, #e9ebe5);
+}
+.admin .media .tabs-btns-rel .btn-exit {
+	position:absolute;
+	display:inline-block;
+	width:56px;
+	padding:2px 2px 2px 24px;
+	right:5px;
+	cursor:pointer;
+	color:#333;
+	text-align:center;
+	border:1px solid #bcbcbc;
+	overflow:hidden;
+	vertical-align:middle;
+	background-color:#fff;
+	background-image:url('{$modTplDir}images/media/btn-exit.png');
+	background-repeat:no-repeat;
+	background-position:1px -20px;
+}
+.admin .media .tabs-btns-rel .btn-exit:hover {
+	color:#000;
+	background-color:#f0f0f0;
+	background-position:1px top;
+}
+.admin .media .tabs-spacer-rel {
+	position:relative;
+	height:2px;
+}
+.admin .media .tabs-spacer-rel .tabs-spacer {
+	position:absolute;
+	width:100%;
+	height:5px;
+	top:-3px;
+	-moz-border-radius-topright:3px;
+	-moz-border-radius-topleft:3px;
+	border-top-left-radius:3px;
+	border-top-right-radius:3px;
+	background-color:#e9ebe5;
+}
+.admin .media .tab {
+	display:none;
+	min-height:436px;
+	padding:5px;
+	background-color:#eff0ec;
+}
+.admin .media .tab.vis {
+	display:block;
+}
+.admin .media .tab .list-ctrls {
+	height:24px;
+	padding-bottom:2px;
+	text-align:left;
+}
+.admin .media .tab .list-ctrls .filt-title {
+	display:inline-block;
+	margin-right:5px;
+	vertical-align:middle;
+}
+.admin .media .tab .list-ctrls .filt-input1 {
+	display:inline-block;
+	width:100px;
+	margin-right:10px;
+	vertical-align:middle;
+}
+.admin .media .tab .list-ctrls .filt-input2 {
+	display:inline-block;
+	width:80px;
+	margin-right:10px;
+	vertical-align:middle;
+}
+.admin .media .tab .list-ctrls .filt-input3 {
+	display:inline-block;
+	width:60px;
+	margin-right:10px;
+	vertical-align:middle;
+}
+.admin .media .tab .list-ctrls .btn-turn {
+	display:inline-block;
+	width:22px;
+	height:20px;
+	margin-right:5px;
+	vertical-align:middle;
+	background-image:url('{$modTplDir}images/media/btn-list-turn.png');
+	background-repeat:no-repeat;
+	cursor:pointer;
+}
+.admin .media .tab .list-ctrls .btn-turn.forw {
+	background-position:left top;
+}
+.admin .media .tab .list-ctrls .btn-turn.forw.dis {
+	background-position:left -20px;
+	cursor:default;
+}
+.admin .media .tab .list-ctrls .btn-turn.back {
+	background-position:-22px top;
+}
+.admin .media .tab .list-ctrls .btn-turn.back.dis {
+	background-position:-22px -20px;
+	cursor:default;
+}
+.admin .media .tab .list-ctrls .turn-num {
+	display:inline-block;
+	padding:0 2px;
+	margin-right:5px;
+	vertical-align:middle;
+	color:#333;
+	font-weight:bold;
+	text-align:center;
+}
+.admin .media .tab .list-area {
+	padding:4px;
+	min-height:400px;
+	background-color:#fff;
+	border:1px solid #e3e3e3;
+}
+.admin .media .tab .list-area .waiter {
+	padding-left:21px;
+	background-position:left center;
+	background-repeat:no-repeat;
+	background-color:#fff;
+}
+.admin .media .tab .list-area .item {
+	margin-right:30px;
+}
+.admin .media .tab .list-area .item:hover {
+	background-color:#eeefeb;
+}
+.admin .media .tab .list-area .item.main {
+}
+.admin .media .tab .list-area .item.main.expanded {
+	background-color:#e0f0ff;
+}
+.admin .media .tab .list-area .item.main .childs {
+	display:none;
+	padding-left:25px;
+	background-color:#f4faff;
+}
+.admin .media .tab .list-area .item.main.expanded .childs {
+	display:block;
+}
+.admin .media .tab .list-area .item .icon {
+	display:inline-block;
+	width:24px;
+	height:24px;
+	padding:1px 1px 1px 0;
+	margin-right:3px;
+	background-size:cover;
+	background-repeat:no-repeat;
+	cursor:pointer;
+	border:0;
+	vertical-align:middle;
+}
+.admin .media .tab .list-area .item .item-btn {
+	display:inline-block;
+	width:80px;
+	padding:2px 2px 2px 0;
+	margin-right:3px;
+	cursor:pointer;
+	color:#333;
+	text-align:center;
+	border:1px solid #bcbcbc;
+	overflow:hidden;
+	vertical-align:middle;
+}
+.admin .media .tab .list-area .item .item-btn:hover {
+	color:#000;
+	background-color:#f0f0f0;
+}
+.admin .media .tab .list-area .item .item-btn.use {
+	width:60px;
+	padding-left:20px;
+	background-image:url('{$modTplDir}images/media/btn-list-use.png');
+	background-repeat:no-repeat;
+	background-position:left -20px;
+}
+.admin .media .tab .list-area .item .item-btn.use:hover {
+	background-position:left top;
+}
+.admin .media .tab .list-area .item .item-btn.info {
+	padding:0;
+	width:20px;
+	height:19px;
+	background-image:url('{$modTplDir}images/media/btn-list-info.png');
+	background-repeat:no-repeat;
+	background-position:center top;
+}
+.admin .media .tab .list-area .item .item-info {
+	display:inline-block;
+	position:relative;
+	width:0;
+	height:21px;
+	vertical-align:middle;
+}
+.admin .media .tab .list-area .item .item-info .body {
+	position:absolute;
+	left:0;
+	top:0;
+	min-width:200px;
+	border:1px solid #bcbcbc;
+	padding:2px;
+	background-color:#fff;
+}
+.admin .media .tab .list-area .item .item-btn.view {
+	padding:0;
+	width:20px;
+	height:19px;
+	background-image:url('{$modTplDir}images/media/btn-list-view.png');
+	background-repeat:no-repeat;
+	background-position:center -20px;
+}
+.admin .media .tab .list-area .item .item-btn.view:hover {
+	background-position:center top;
+}
+.admin .media .tab .list-area .item .item-btn.edit {
+	padding:0;
+	width:20px;
+	height:19px;
+	background-image:url('{$modTplDir}images/media/btn-list-edit.png');
+	background-repeat:no-repeat;
+	background-position:center -20px;
+}
+.admin .media .tab .list-area .item .item-btn.edit:hover {
+	background-position:center top;
+}
+.admin .media .tab .list-area .item .item-btn.bchilds {
+	padding:0;
+	width:20px;
+	height:19px;
+	background-image:url('{$modTplDir}images/media/btn-list-childs.png');
+	background-repeat:no-repeat;
+	background-position:center top;
+}
+.admin .media .tab .list-area .item .item-btn.bchilds.dis {
+	background-position:center -20px;
+	cursor:default;
+}
+.admin .media .tab .list-area .item .item-btn.bchilds.dis:hover {
+	background-color:#fff;
+}
+.admin .media .tab .list-area .item .item-path {
+	display:inline-block;
+	width:295px;
+	padding:2px 2px 2px 0;
+	margin-left:7px;
+	vertical-align:middle;
+	overflow:hidden;
+}
+.admin .media .tab .list-area .item .item-btn.del {
+	float:right;
+	padding:0;
+	width:20px;
+	height:19px;
+	margin:2px 0 0 0;
+	background-image:url('{$modTplDir}images/media/btn-list-del.png');
+	background-repeat:no-repeat;
+	background-position:left -20px;
+}
+.admin .media .tab .list-area .item .item-btn.del:hover {
+	background-position:left top;
+}
+/* ---------------- вкладка превью ---------------- */
+.admin .media .tab .preview {
+	width:100%;
+}
+.admin .media .tab .preview .big {
+	margin-right:145px;
+	overflow:hidden;
+}
+.admin .media .tab .preview .big .title {
+	height:18px;
+	padding:2px 0 2px 25px;
+	margin-bottom:2px;
+	border-bottom:1px solid #bcbcbc;
+	font-size:14px;
+	color:#0b55c4;
+	background:url('{$modTplDir}images/media/icn-preview.png') left center no-repeat #fff;
+}
+.admin .media .tab .preview .big .title span {
+	color:#000;
+	font-size:90%;
+	-webkit-user-select:initial;
+	-moz-user-select:initial;
+	-ms-user-select:initial;
+	-o-user-select:initial;
+	user-select:initial;
+}
+.admin .media .tab .preview .big .canvas {
+	position:relative;
+	min-height:409px;/* 25-title, 2 - borders, 436 - total min */
+	border:1px solid #bcbcbc;
+	overflow:hidden;
+}
+.admin .media .tab .preview .big .canvas img {
+	position:absolute;
+	display:block;
+}
+.admin .media .tab .preview .big .canvas .zoom {
+	position:absolute;
+	display:block;
+	width:100%;
+	left:0;
+	top:50%;
+	margin-top:-22px;
+	text-align:center;
+}
+.admin .media .tab .preview .big .canvas .zoom span {
+	display:inline-block;
+	font-size:36px;
+	text-align:center;
+	color:#fff;
+	text-shadow: 1px 1px 2px black, 0 0 1em red;
+}
+.admin .media .tab .preview .big .canvas .move {
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	cursor:move;
+	background-color:transparent;
+}
+.admin .media .tab .preview.no-tools .big .canvas .move {
+	cursor:default;
+}
+.admin .media .tab .preview .big .canvas .tools {
+	position:absolute;
+	top:3px;
+	right:3px;
+	width:180px;
+	height:18px;
+	background-color:transparent;
+	overflow:hidden;
+	display:none;
+}
+.admin .media .tab .preview .big .canvas:hover .tools {
+	display:block;
+}
+.admin .media .tab .preview.no-tools .big .canvas:hover .tools {
+	display:none;
+}
+.admin .media .tab .preview .big .canvas .tools .img-btn {
+	float:right;
+	width:34px;
+	height:16px;
+	font-size:12px;
+	color:#fff;
+	text-align:center;
+	background-color:#000;
+	border:1px solid #163e60;
+	-moz-opacity:0.3;
+	filter:alpha(opacity=0.3);
+	opacity:0.3;
+	cursor:pointer;
+}
+.admin .media .tab .preview .big .canvas .tools .img-btn:hover {
+	-moz-opacity:0.6;
+	filter:alpha(opacity=0.6);
+	opacity:0.6;
+}
+.admin .media .tab .preview .big .canvas .tools .img-btn.bigger {
+	font-weight:bold;
+	font-size:13px;
+	width:26px;
+}
+.admin .media .tab .preview .big .canvas .tools .img-btn-sect {
+	float:right;
+	width:4px;
+	height:20px;
+	background-color:transparent;
+}
+.admin .media .tab .preview .big .canvas .info {
+	position:absolute;
+	padding-bottom:10px;
+}
+.admin .media .tab .preview .big .canvas .info .title {
+	height:18px;
+	padding:2px 0 2px 25px;
+	margin-bottom:2px;
+	border-bottom:1px solid #bcbcbc;
+	font-size:14px;
+	color:#0b55c4;
+	background:url('{$modTplDir}images/media/icn-info.png') left center no-repeat #fff;
+}
+.admin .media .tab .preview .big .canvas .info .field {
+	padding-bottom:3px;
+	overflow:hidden;
+}
+.admin .media .tab .preview .big .canvas .info .field .fname {
+	float:left;
+	min-width:150px;
+	color:#333;
+	font-size:12px;
+	padding:1px 0;
+}
+.admin .media .tab .preview .big .canvas .info .field .fvalue {
+	float:left;
+	color:#3c637c;
+	font-size:12px;
+	padding:1px 0 1px 20px;
+}
+.admin .media .tab .preview .big .canvas .info .field .fvalue a {
+	color:inherit;
+	font-size:inherit;
+}
+.admin .media .tab .preview .big .canvas .info .btn-use {
+	display:inline-block;
+	width:120px;
+	padding:2px 2px 2px 20px;
+	cursor:pointer;
+	color:#333;
+	text-align:center;
+	border:1px solid #bcbcbc;
+	vertical-align:middle;
+	background-color:#fff;
+	background-image:url('{$modTplDir}images/media/btn-list-use.png');
+	background-repeat:no-repeat;
+	background-position:left -20px;
+	overflow:hidden;
+}
+.admin .media .tab .preview .big .canvas .info .btn-use:hover {
+	color:#000;
+	background-position:left top;
+}
+.admin .media .tab .preview .vspace {
+	display:none;
+	width:0;
+	height:400px;
+}
+.admin .media .tab .preview .copies {
+	float:right;
+	width:130px;
+	overflow:hidden;
+	overflow-y:auto;
+}
+.admin .media .tab .preview .copies .title {
+	height:18px;
+	padding:2px 0 2px 25px;
+	margin-bottom:2px;
+	border-bottom:1px solid #bcbcbc;
+	font-size:14px;
+	color:#0b55c4;
+	background:url('{$modTplDir}images/media/icn-sizes.png') left top no-repeat #fff;
+}
+.admin .media .tab .preview .copies .orig {
+	width:100%;
+	height:80px;
+	margin-bottom:10px;
+	text-align:center;
+	overflow:hidden;
+	cursor:pointer;
+}
+.admin .media .tab .preview .copies .orig .rel {
+	position:relative;
+	width:100%;
+	height:0;
+}
+.admin .media .tab .preview .copies .orig .rel .btn-crop {
+	display:none;
+	width:32px;
+	height:32px;
+	margin:0 0 0 auto;
+	border:1px solid #163e60;
+	-moz-opacity:0.3;
+	filter:alpha(opacity=0.3);
+	opacity:0.3;
+	background:url('{$modTplDir}images/media/btn-preview-crop.png') left top no-repeat;
+	background-color:#000;
+	cursor:pointer;
+	z-index:+1;
+}
+.admin .media .tab .preview .copies .orig:hover .btn-crop {
+	display:block;
+}
+.admin .media .tab .preview .copies .orig .btn-crop:hover {
+	-moz-opacity:0.8;
+	filter:alpha(opacity=0.8);
+	opacity:0.8;
+}
+.admin .media .tab .preview .copies .orig img {
+	display:block;
+	width:100%;
+	height:auto;
+}
+.admin .media .tab .preview .copies .clist {
+	width:130px;
+	min-height:296px;
+	overflow:hidden;
+}
+.admin .media .tab .preview .copies .clist .copy {
+	position:relative;
+	width:180px;
+	height:100px;
+	margin-bottom:8px;
+	text-align:center;
+	overflow:hidden;
+	cursor:pointer;
+}
+.admin .media .tab .preview .copies .clist .copy img {
+	position:absolute;
+	width:180px;
+	height:auto;
+	left:0;
+	top:50px;
+	margin-top:-59px;
+}
+.admin .media .tab .preview .copies .clist .copy .btn-edit {
+	display:none;
+	float:left;
+	width:32px;
+	height: 19px;
+	border:1px solid #163e60;
+	-moz-opacity:0.3;
+	filter:alpha(opacity=0.3);
+	opacity:0.3;
+	background:url('{$modTplDir}images/media/btn-list-edit.png') center top no-repeat;
+	background-color:#000;
+	cursor:pointer;
+}
+.admin .media .tab .preview .copies .clist .copy:hover .btn-edit {
+	display:block;
+}
+.admin .media .tab .preview .copies .clist .copy .btn-edit:hover {
+	-moz-opacity:0.8;
+	filter:alpha(opacity=0.8);
+	opacity:0.8;
+}
+.admin .media .tab .preview .copies .clist .copy .btn-del {
+	display:none;
+	float:left;
+	width:32px;
+	height: 19px;
+	border:1px solid #163e60;
+	margin-left:10px;
+	-moz-opacity:0.3;
+	filter:alpha(opacity=0.3);
+	opacity:0.3;
+	background:url('{$modTplDir}images/media/btn-list-del.png') center top no-repeat;
+	background-color:#000;
+	cursor:pointer;
+}
+.admin .media .tab .preview .copies .clist .copy:hover .btn-del {
+	display:block;
+}
+.admin .media .tab .preview .copies .clist .copy .btn-del:hover {
+	-moz-opacity:0.8;
+	filter:alpha(opacity=0.8);
+	opacity:0.8;
+}.admin .media .tab .preview .copies .clist-rel {
+	float:right;
+	display:none;
+	position:relative;
+	width:0;
+	height:316px;
+}
+.admin .media .tab .preview .copies:hover .clist-rel {
+	display:block;
+}
+.admin .media .tab .preview .copies .clist-rel .clist-bar {
+	position:;
+	width:0;
+	height:316px;
+}
+.admin .media .tab .preview .copies .clist .wait {
+	display:block;
+	padding:30px 71px 30px 71px;
+	width:16px;
+	height:16px;
+	border:1px solid #bcbcbc;
+}
+.admin .media .tab .preview .copies .pr-main .pr-size-del {
+	height:16px;
+	text-align:left;
+}
+.admin .media .tab .preview .copies .pr-main .pr-size-del .pr-size {
+	font-size:12px;
+	text-align:left;
+}
+.admin .media .tab .preview .copies .pr-main .pr-size-del .pr-del {
+	float:right;
+	display:inline-block;
+	height:16px;
+	padding-left:26px;
+	font-size:12px;
+	text-decoration:underline;
+	background:url('{$modTplDir}images/media/icn-del.png') 6px center no-repeat;
+	cursor:pointer;
+}
+.admin .media .tab .preview .copies .pr-main .pr-size-del .pr-del:hover {
+	text-decoration:none;
+}
+.admin .media .tab .preview .copies .btn-crop-add {
+	width:158px;
+	text-align:center;
+	padding:35px 0 35px 0;
+	border:1px solid #bcbcbc;
+	background:url('{$modTplDir}images/media/bg-btn-crop.png') center no-repeat;
+	color:#666;
+	cursor:pointer;
+}
+/* ---------------- -------------- ---------------- */
+.admin .media .media-list-edit {
+	width:100%;
+	padding:10px 0 10px 0;
+	font-size:12px;
+	text-align:left;
+}
+.admin .media .media-list-edit .pop-title {
+	fint-size:14px;
+	font-weight:bold;
+	padding-bottom:5px;
+}
+.admin .media .media-list-edit .note {
+	font-style:italic;
+	padding-bottom:5px;
+}
+.admin .media .media-list-edit .field-title {
+	font-size:12px;
+}
+.admin .media .media-list-edit .inp-wrapper {
+	padding:0 0 10px 0;
+}
+.admin .media .media-list-edit .inp-wrapper input[type="text"] {
+	width:50%;
+	outline:0 solid #76A5EC;
+	border:1px solid #0b55c4;
+	-moz-border-radius:3px;
+	border-radius:3px;
+	padding:2px;
+	font-size:12px;
+}
+.admin .media.modal .media-list-edit .inp-wrapper input[type="text"] {
+	width:90%;
+}
+.admin .media .media-list-edit .turn-expert {
+	width:130px;
+	height:16px;
+	padding:2px 0;
+	font-size:12px;
+	overflow:hidden;
+	color:#0b55c4;
+	cursor:pointer;
+}
+.admin .media .media-list-edit .turn-expert:hover {
+	text-decoration:underline;
+}
+.admin .media .media-list-edit .turn-expert .icn {
+	display:inline-block;
+	width:16px;
+	height:17px;
+	margin-right:10px;
+	background:url('{$modTplDir}images/icn-tune.png') left -17px no-repeat;
+}
+.admin .media .media-list-edit .turn-expert:hover .icn {
+	background-position:left top;
+}
+.admin .media .media-list-edit .turn-expert * {
+	vertical-align:middle;
+}
+.admin .media .media-list-edit .expert {
+	padding:5px 0;
+	border-top:1px dashed #bcbcbc;
+}
+.admin .media .media-list-edit .expert .name-preview {
+	padding:5px 0;
+	font-size:13px;
+	font-weight:bold;
+}
+.admin .media .media-list-edit .expert .chbx-wrap {
+	display:block;
+	padding:3px 0;
+	margin-bottom:auto;
+}
+.admin .media .media-list-edit .expert .chbx-wrap input.ex-opt {
+	vertical-align:middle;
+	margin:2px 5px 2px 0;
+}
+.admin .media .media-list-edit img.wait {
+	display:block;
+	padding:5px 0;
+}
+.admin .media .media-list-edit .btn {
+	display:inline-block;
+	height:18px;
+	padding:4px 10px 3px 10px;
+	margin-right:10px;
+	cursor:pointer;
+	border:1px solid #327DA0;
+	-moz-border-radius:5px;
+	border-radius:5px;
+	background:url('{$modTplDir}images/media/bg-btn.gif') left top repeat-x;
+	color:white;
+	font-size:12px;
+}
+.admin .media .upload-area {
+	padding:0 0 10px 10px;
+}
+.admin .media .upload-area .lib-list-edit {
+	width:450px;
+}
+.admin .media .upload-area .lib-list-edit .inp-wrapper input[type="text"] {
+	width:400px;
+}
+/* ------------------- uploader ------------------- */
+.admin .media .media-uploader {
+	font-size:12px;
+}
+.admin .media .media-uploader .upl-wait {
+	display:inline-block;
+	width:16px;
+	height:16px;
+	padding-right:10px;
+	vertical-align:middle;
+}
+.admin .media .media-uploader .title {
+	padding:4px 0;
+	font-size:14px;
+}
+.admin .media .media-uploader .msg {
+	display:inline-block;
+	padding-bottom:4px;
+	color:#000;
+}
+.admin .media .media-uploader .msg.err {
+	color:#ff0000;
+}
+.admin .media .media-uploader .filebrowse-fld {
+	overflow:hidden;
+}
+.admin .media .media-uploader .filebrowse-fld .filebrowse-btn {
+	float:left;
+	display:block;
+	overflow:hidden;
+	position:relative;
+	height:24px;
+	margin:0;
+	width:155px;
+	appearance:push-button;
+	-moz-appearance:button;
+	-moz-user-select:none;
+	-webkit-appearance:push-button;
+	-webkit-user-select:none;
+	user-select:none;
+	border: 2px outset buttonface;
+	background-color: buttonface;
+}
+.admin .media .media-uploader .filebrowse-fld .filebrowse-btn .bgicon {
+	position:absolute;
+	left:3px;
+	top:2px;
+	width:20px;
+	height:20px;
+	background:url('{$modTplDir}images/media/uploader/icn-upload.png') left -20px no-repeat;
+}
+.admin .media .media-uploader .filebrowse-fld:hover .filebrowse-btn .bgicon {
+	background-position:left top;
+}
+.admin .media .media-uploader .filebrowse-fld .filebrowse-btn span.btn-title {
+	display:block;
+	position:absolute;
+	top:5px;
+	padding:0 0 0 30px;
+	font-size:12px;
+	text-align:center;
+	text-transform:none;
+}
+.admin .media .media-uploader .filebrowse-fld .filebrowse-btn input[type="file"] {
+	position:absolute;
+	margin-top:-50px;
+	margin-left:-1810px;
+	-moz-opacity:0;
+	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+	opacity:0;
+	font-size:150px;
+	height:100px;
+	background-color:transparent;
+	cursor:pointer;
+}
+/* ---------------- -------------- ---------------- */
+/* ------------------ media-icons ----------------- */
+.admin .media-icn {
+	background-image:url('{$modTplDir}images/media/fileicons/file.png');
+}
+.admin .media-icn.avi {
+	background-image:url('{$modTplDir}images/media/fileicons/avi.png');
+}
+.admin .media-icn.bmp {
+	background-image:url('{$modTplDir}images/media/fileicons/bmp.png');
+}
+.admin .media-icn.doc {
+	background-image:url('{$modTplDir}images/media/fileicons/doc.png');
+}
+.admin .media-icn.docx {
+	background-image:url('{$modTplDir}images/media/fileicons/docx.png');
+}
+.admin .media-icn.eps {
+	background-image:url('{$modTplDir}images/media/fileicons/eps.png');
+}
+.admin .media-icn.file {
+	background-image:url('{$modTplDir}images/media/fileicons/file.png');
+}
+.admin .media-icn.fla {
+	background-image:url('{$modTplDir}images/media/fileicons/fla.png');
+}
+.admin .media-icn.gif {
+	background-image:url('{$modTplDir}images/media/fileicons/gif.png');
+}
+.admin .media-icn.htm {
+	background-image:url('{$modTplDir}images/media/fileicons/htm.png');
+}
+.admin .media-icn.html {
+	background-image:url('{$modTplDir}images/media/fileicons/html.png');
+}
+.admin .media-icn.jpeg {
+	background-image:url('{$modTplDir}images/media/fileicons/jpeg.png');
+}
+.admin .media-icn.jpg {
+	background-image:url('{$modTplDir}images/media/fileicons/jpg.png');
+}
+.admin .media-icn.mov {
+	background-image:url('{$modTplDir}images/media/fileicons/mov.png');
+}
+.admin .media-icn.mp3 {
+	background-image:url('{$modTplDir}images/media/fileicons/mp3.png');
+}
+.admin .media-icn.mpeg {
+	background-image:url('{$modTplDir}images/media/fileicons/mpeg.png');
+}
+.admin .media-icn.mpg {
+	background-image:url('{$modTplDir}images/media/fileicons/mpg.png');
+}
+.admin .media-icn.pdf {
+	background-image:url('{$modTplDir}images/media/fileicons/pdf.png');
+}
+.admin .media-icn.png {
+	background-image:url('{$modTplDir}images/media/fileicons/png.png');
+}
+.admin .media-icn.ppt {
+	background-image:url('{$modTplDir}images/media/fileicons/ppt.png');
+}
+.admin .media-icn.pptx {
+	background-image:url('{$modTplDir}images/media/fileicons/pptx.png');
+}
+.admin .media-icn.psd {
+	background-image:url('{$modTplDir}images/media/fileicons/psd.png');
+}
+.admin .media-icn.rar {
+	background-image:url('{$modTplDir}images/media/fileicons/rar.png');
+}
+.admin .media-icn.swf {
+	background-image:url('{$modTplDir}images/media/fileicons/swf.png');
+}
+.admin .media-icn.tif {
+	background-image:url('{$modTplDir}images/media/fileicons/tif.png');
+}
+.admin .media-icn.tiff {
+	background-image:url('{$modTplDir}images/media/fileicons/tiff.png');
+}
+.admin .media-icn.txt {
+	background-image:url('{$modTplDir}images/media/fileicons/txt.png');
+}
+.admin .media-icn.wav {
+	background-image:url('{$modTplDir}images/media/fileicons/wav.png');
+}
+.admin .media-icn.wma {
+	background-image:url('{$modTplDir}images/media/fileicons/wma.png');
+}
+.admin .media-icn.wmv {
+	background-image:url('{$modTplDir}images/media/fileicons/wmv.png');
+}
+.admin .media-icn.xls {
+	background-image:url('{$modTplDir}images/media/fileicons/xls.png');
+}
+.admin .media-icn.xlsx {
+	background-image:url('{$modTplDir}images/media/fileicons/xlsx.png');
+}
+.admin .media-icn.zip {
+	background-image:url('{$modTplDir}images/media/fileicons/zip.png');
+}
+/* ---------------- -------------- ---------------- */
+/* ----------------- media-cropper ---------------- */
+.admin .media .image-cropper {
+	text-align:left;
+	width:800px;
+	height:600px;
+	font-size:12px;
+}
+.admin .media .image-cropper .ic-title {
+	border-top:1px solid #ccc;
+	border-right:1px solid #ccc;
+	border-left:1px solid #ccc;
+	-moz-border-radius-topright:5px;
+	-moz-border-radius-topleft:5px;
+	border-top-left-radius:5px;
+	border-top-right-radius:5px;
+	height:21px;
+	padding:2px 30px 0 7px;
+	background:url('{$modTplDir}images/media/img-cropper/bg-tit.gif') left top repeat-x;
+}
+.admin .media .image-cropper .ic-title .ic-title-inner {
+	padding-left:20px;
+	height:18px;
+	background:url('{$modTplDir}images/media/img-cropper/icons.png') left top no-repeat;
+}
+.admin .media .image-cropper .ic-toolbar {
+	width:100%;
+	height:24px;
+	padding:5px 0;
+}
+.admin .media .image-cropper .ic-toolbar .ic-btn-sp {
+	float:left;
+	width:10px;
+	height:18px;
+}
+.admin .media .image-cropper .ic-toolbar .ic-btn-sp-grad {
+	float:left;
+	width:50px;
+	height:24px;
+	background:url('{$modTplDir}images/media/img-cropper/grad.png') left top repeat-y;
+}
+.admin .media .image-cropper .ic-toolbar .ic-btn-cancel {
+	float:left;
+	padding-left:22px;
+	padding-top:2px;
+	width:50px;
+	height:16px;
+	border:1px solid #bcbcbc;
+	font-size:11px;
+	font-family:Arial;
+	color:#000;
+	text-align:left;
+	background:url('{$modTplDir}images/media/img-cropper/icons.png') 2px -18px no-repeat;
+	cursor:pointer;
+}
+.admin .media .image-cropper .ic-toolbar .ic-btn-cancel:hover {
+	background-position:2px -36px;
+	background-color:#ccc;
+}
+.admin .media .image-cropper .ic-toolbar .ic-btn-done {
+	float:left;
+	padding-left:22px;
+	padding-top:2px;
+	width:30px;
+	height:16px;
+	border:1px solid #bcbcbc;
+	font-size:11px;
+	font-family:Arial;
+	color:#000;
+	text-align:left;
+	background:url('{$modTplDir}images/media/img-cropper/icons.png') 2px -54px no-repeat;
+	cursor:pointer;
+}
+.admin .media .image-cropper .ic-toolbar .ic-btn-done:hover {
+	background-position:2px -72px;
+	background-color:#ccc;
+}
+.admin .media .image-cropper .ic-toolbar .ic-btn-done-dis {
+	float:left;
+	padding-left:22px;
+	padding-top:2px;
+	width:30px;
+	height:16px;
+	border:1px solid #bcbcbc;
+	font-size:11px;
+	font-family:Arial;
+	color:#000;
+	text-align:left;
+	cursor:default;
+	background:url('{$modTplDir}images/media/img-cropper/icons.png') 2px -54px no-repeat;
+	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+	-moz-opacity: 0.5;
+	-khtml-opacity: 0.5;
+	opacity: 0.5;
+}
+.admin .media .image-cropper .ic-toolbar .ic-btn-done-dis:hover {
+	background-color:#fff;
+}
+.admin .media .image-cropper .ic-toolbar .tb-inner {
+	margin-left:140px;
+	background-color:#eee;
+	height:24px;
+}
+.admin .media .image-cropper .ic-toolbar .tb-inner .ic-btn {
+	float:left;
+	width:20px;
+	height:18px;
+	margin-top:2px;
+	border:1px solid #eee;
+	background-color:#f0f0f0;
+	cursor:pointer;
+}
+.admin .media .image-cropper .ic-toolbar .tb-inner .ic-btn:hover {
+	border-left:1px solid #e3e3e3;
+	border-top:1px solid #e3e3e3;
+	border-right:1px solid #717171;
+	border-bottom:1px solid #717171;
+	background-color:#f6f6f6;
+}
+.admin .media .image-cropper .ic-toolbar .tb-inner .ic-btn-act {
+	float:left;
+	width:20px;
+	height:18px;
+	border-left:1px solid #717171;
+	border-top:1px solid #717171;
+	border-right:1px solid #e3e3e3;
+	border-bottom:1px solid #e3e3e3;
+	margin-top:2px;
+	background-color:#fff;
+	cursor:pointer;
+}
+.admin .media .image-cropper .ic-toolbar .tb-inner .btn-zoom {
+	background:url('{$modTplDir}images/media/img-cropper/icons.png') center -90px no-repeat;
+}
+.admin .media .image-cropper .ic-toolbar .tb-inner .btn-crop {
+	background:url('{$modTplDir}images/media/img-cropper/icons.png') center -108px no-repeat;
+}
+.admin .media .image-cropper .ic-toolbar .tb-inner .btn-zoom100 {
+	background:url('{$modTplDir}images/media/img-cropper/icons.png') center -126px no-repeat;
+}
+.admin .media .image-cropper .ic-toolbar .tb-inner .btn-zoom100:active {
+	border-left:1px solid #717171;
+	border-top:1px solid #717171;
+	border-right:1px solid #e3e3e3;
+	border-bottom:1px solid #e3e3e3;
+	background-color:#fff;
+}
+.admin .media .image-cropper .ic-toolbar .tb-inner .btn-shift {
+	background:url('{$modTplDir}images/media/img-cropper/icons.png') center -162px no-repeat;
+}
+.admin .media .image-cropper .ic-toolbar .tb-inner .btn-shift-dis {
+	background:url('{$modTplDir}images/media/img-cropper/icons.png') center -144px no-repeat;
+}
+.admin .media .image-cropper .ic-toolbar .tb-inner .btn-shift-dis:hover {
+	border:1px solid #eee;
+	background-color:#f0f0f0;
+}
+.admin .media .image-cropper .ic-toolbar .tb-inner .btn-shift:active {
+	border-left:1px solid #717171;
+	border-top:1px solid #717171;
+	border-right:1px solid #e3e3e3;
+	border-bottom:1px solid #e3e3e3;
+	background-color:#fff;
+}
+.admin .media .image-cropper .ic-toolbar .tb-inner .btn-shift-dis .drop-ceil {
+	position:relative;
+	display:none;
+}
+.admin .media .image-cropper .ic-toolbar .tb-inner .btn-shift .drop-ceil {
+	position:relative;
+	display:none;
+	width:20px;
+	height:18px;
+	background-color:transparent;
+}
+.admin .media .image-cropper .ic-toolbar .tb-inner .btn-shift:active .drop-ceil {
+	display:block;
+	z-index: +10;
+}
+.admin .media .image-cropper .ic-toolbar .tb-inner .btn-shift:hover .drop-ceil {
+	display:block;
+	z-index: +10;
+}
+.admin .media .image-cropper .ic-toolbar .tb-inner .btn-shift .drop-ceil .fields {
+	position:absolute;
+	left:0;
+	top:18px;
+	width:30px;
+	height:150px;
+	border:1px solid #bcbcbc;
+	background-color:#fff;
+}
+.admin .media .image-cropper .ic-toolbar .tb-inner .btn-shift .drop-ceil .fields .shift-val {
+	display:block;
+	font-size:10px;
+	padding:1px;
+	margin:0;
+}
+.admin .media .image-cropper .ic-toolbar .tb-inner .btn-shift .drop-ceil .fields .shift-val:hover {
+	background-color:#eee;
+}
+.admin .media .image-cropper .ic-toolbar .tb-inner .fld-name {
+	float:left;
+	padding:5px 5px 0 0;
+	height:15px;
+	font-size:11px;
+	font-family:Arial;
+	color:#000;
+	text-align:left;
+}
+.admin .media .image-cropper .ic-toolbar .tb-inner .fld-val {
+	float:left;
+	padding:1px 3px 1px 3px;
+	width:36px;
+	height:14px;
+	margin-top:3px;
+	font-size:11px;
+	font-family:Arial;
+	color:#000;
+	text-align:left;
+	border:1px solid #e3e3e3;
+	background-color:#fff;
+}
+.admin .media .image-cropper .ic-toolbar .tb-inner .lock {
+	float:left;
+	width:16px;
+	height:20px;
+	background:url('{$modTplDir}images/media/img-cropper/icons.png') center -178px no-repeat;
+}
+.admin .media .image-cropper .ic-toolbar .tb-inner input:disabled[type="text"].fin-sizes {
+	float:left;
+	width:36px;
+	outline:0;
+	border:1px solid #bcbcbc;
+	-moz-border-radius:3px;
+	padding:1px;
+	font-size:10px;
+	font-family:Arial;
+	margin-top:3px;
+}
+.admin .media .image-cropper .ic-toolbar .tb-inner input[type="text"].fin-sizes {
+	float:left;
+	width:36px;
+	outline:0;
+	border:1px solid #30a3f3;
+	-moz-border-radius:3px;
+	padding:1px;
+	font-size:10px;
+	font-family:Arial;
+	margin-top:3px;
+}
+.admin .media .image-cropper .ic-toolbar .tb-inner input:focus[type="text"].fin-sizes {
+	-moz-outline-radius:3px; /* firefox */
+	outline-width:1px; /* firefox */
+	outline:3px auto -webkit-focus-ring-color; /* chrome */
+	outline-color:#76a5ec; /* chrome - перезапись цвета webkit */
+}
+.admin .media .image-cropper .canvas {
+	border:1px solid #bcbcbc;
+	position:relative;
+	overflow:hidden;
+}
+.admin .media .image-cropper .canvas .crop-image {
+	position:absolute;
+}
+.admin .media .image-cropper .canvas .crop-zoom {
+	position:absolute;
+	display:block;
+	left:0;
+	top:0;
+	padding:30px 0 0 30px;
+}
+.admin .media .image-cropper .canvas .crop-zoom span {
+	display:inline-block;
+	font-size:36px;
+	text-align:center;
+	color:#fff;
+	text-shadow: 1px 1px 2px black, 0 0 1em red;
+}
+.admin .media .image-cropper .canvas .crop-select {
+	position:absolute;
+	outline:1px dashed #000;
+	-khtml-outline-offset:-1px;
+	-moz-outline-offset:-1px;
+	-webkit-outline-offset:-1px;
+}
+.admin .media .image-cropper .canvas .crop-select div {
+	width:100%;
+	height:100%;
+	border:1px solid #fff;
+	margin:-1px 0 0 -1px;
+}
+.admin .media .image-cropper .canvas .crop-event {
+	position:absolute;
+	left:1px;
+	top:1px;
+	background-color:transparent;
+}
+/* ------------------------------------------------ */
+/* ----------- стили для раздела Модули ----------- */
+.admin .admin-main .admin-workarea .section.modules .admin-data tr.core {
+	/*display:none;*/
+}
+.admin .admin-main .admin-workarea .section.modules .modules-list .filters {
+	padding-bottom:10px;
+}
+.admin .admin-main .admin-workarea .section.modules .modules-list .filters input[type="checkbox"] {
+	vertical-align:middle;
+}
+.admin .admin-main .admin-workarea .section.modules .modules-list .pager {
+	padding:10px 0 15px 0;
+	border-top:1px solid #e6edf5;
+}
+.admin .admin-main .admin-workarea .section.modules .modules-list .pager span.page-go {
+	display:inline-block;
+	padding:0 10px 0 0;
+	font-size:12px;
+	text-decoration:underline;
+	color:#0b55c4;
+	cursor:pointer;
+}
+.admin .admin-main .admin-workarea .section.modules .modules-list .pager span.page-go.pact {
+	font-size:14px;
+	font-weight:bold;
+}
+.admin .admin-main .admin-workarea .section.modules .modules-data .sub-tabs {
+	padding-bottom:10px;
+	border-bottom:1px solid #e7e7e7;
+}
+.admin .admin-main .admin-workarea .section.modules .modules-data .sub-tabs .tab-ref {
+	display:inline-block;
+	padding:5px 10px;
+	margin-right:5px;
+	border:1px solid #e7e7e7;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	-khtml-border-radius:3px;
+	border-radius:3px;
+	font-size:12px;
+	color:#0b55c4;
+	text-decoration:none;
+	background-color:#f4f4f4;
+}
+.admin .admin-main .admin-workarea .section.modules .modules-data .sub-tabs .tab-ref:hover {
+	color:#fff;
+	background-color:#397bad;
+}
+.admin .admin-main .admin-workarea .section.modules .modules-data .sub-tabs.self .tab-ref.self,
+.admin .admin-main .admin-workarea .section.modules .modules-data .sub-tabs.code .tab-ref.code,
+.admin .admin-main .admin-workarea .section.modules .modules-data .sub-tabs.cfg .tab-ref.cfg {
+	background-color:#397bad;
+	color:#fff;
+}
+.admin .admin-main .admin-workarea .section.modules .modules-data .sp-line {
+	height:10px;
+}
+/* ----------------------------------------------- */
+/* ----------- стили для раздела Система --------- */
+.admin .admin-main .admin-workarea .section.system .section-inner .admin-data {
+	padding-bottom:30px;
+}
+.admin .admin-main .admin-workarea .section.system .section-inner .admin-data .title-php {
+	padding-bottom:20px;
+	font-weight:bold;
+}
+.admin .admin-main .admin-workarea .section.system .section-inner .admin-data .title-mysql {
+	padding:20px 0;
+	font-weight:bold;
+}
+.admin .admin-main .admin-workarea .section.system .section-inner .admin-data table .row1 {
+	background-color:#efefef;
+}
+.admin .admin-main .admin-workarea .section.system .section-inner .admin-data table .row2 {
+	background-color:#fff;
+}
+/* --------------------------------------------------- */
+/* --------------------------------------------------- */
+/* --------------------------------------------------- */
+
+/* --------- SKIN MODIFICATION, NAME: icons32 -------- */
+/* ------------ левая колонка, кнопки меню ----------- */
+.admin .admin-main.icons32 .admin-leftcol .asect-btn .icon {
+	width:32px;
+	height:32px;
+}
+.admin .admin-main.icons32 .admin-leftcol .asect-btn .icon.gray-out {
+	filter:url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+, Firefox on Android */
+	filter:grayscale(100%);
+	-moz-filter:grayscale(100%);
+	-ms-filter:grayscale(100%);
+	-o-filter:grayscale(100%);
+	filter:gray; /* IE6-9 */
+	-webkit-filter:grayscale(100%); /* Chrome 19+, Safari 6+, Safari 6+ iOS */
+}
+.admin .admin-main.icons32 .admin-leftcol .asect-btn.act .icon.gray-out,
+.admin .admin-main.icons32 .admin-leftcol .asect-btn:hover .icon.gray-out {
+	filter:url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/></filter></svg>#grayscale");
+	filter:grayscale(0%);
+	-moz-filter:grayscale(0%);
+	-ms-filter:grayscale(0%);
+	-o-filter:grayscale(0%);
+	filter:none; /* IE6-9 */
+	zoom:1;
+	-webkit-filter:grayscale(0%); /* Chrome 19+, Safari 6+, Safari 6+ iOS */
+}
+.admin .admin-main.icons32 .admin-leftcol .asect-btn.asect-intro .icon {
+	background-position:left top;
+}
+.admin .admin-main.icons32 .admin-leftcol .asect-btn.asect-content .icon {
+	background-position:left -32px;
+}
+.admin .admin-main.icons32 .admin-leftcol .asect-btn.asect-media .icon {
+	background-position:left -64px;
+}
+.admin .admin-main.icons32 .admin-leftcol .asect-btn.asect-modules .icon {
+	background-position:left -96px;
+}
+.admin .admin-main.icons32 .admin-leftcol .asect-btn.asect-settings .icon {
+	background-position:left -128px;
+}
+.admin .admin-main.icons32 .admin-leftcol .asect-btn.asect-stat .icon {
+	background-position:left -160px;
+}
+.admin .admin-main.icons32 .admin-leftcol .asect-btn.asect-system .icon {
+	background-position:left -192px;
+}
+.admin .admin-main.icons32 .admin-leftcol .asect-btn.asect-help .icon {
+	background-position:left -224px;
+}
+.admin .admin-main.icons32 .admin-leftcol .asect-btn .title {
+	padding:6px 15px 0 0;
+	margin-left:40px;
+	font-size:16px;
+	font-weight:normal;
+}
+/* --------------------------------------------------- */
+/* ---------------- контентная часть ----------------- */
+.admin .admin-main.icons32 .admin-workarea .section.intro .section-title {
+	padding-top:6px;
+}
+.admin .admin-main.icons32 .admin-workarea .section .section-title .icon {
+	height:32px;
+	background-image:url('{$modTplDir}images/sect-icns.png');
+	background-repeat:no-repeat;
+	background-size:32px auto;
+}
+.admin .admin-main.icons32 .admin-workarea .section .section-title .text {
+	padding-top:6px;
+}
+/* --------------------------------------------------- */
+/* ---------- стили для заголовков разделов ---------- */
+.admin .admin-main.icons32 .admin-workarea .section.intro .section-title .icon {
+	background-position:center top;
+}
+.admin .admin-main.icons32 .admin-workarea .section.content .section-title .icon {
+	background-position:center -32px;
+}
+.admin .admin-main.icons32 .admin-workarea .section.media .section-title .icon {
+	background-position:center -64px;
+}
+.admin .admin-main.icons32 .admin-workarea .section.modules .section-title .icon {
+	background-position:center -96px;
+}
+.admin .admin-main.icons32 .admin-workarea .section.settings .section-title .icon {
+	background-position:center -128px;
+}
+.admin .admin-main.icons32 .admin-workarea .section.stat .section-title .icon {
+	background-position:center -160px;
+}
+.admin .admin-main.icons32 .admin-workarea .section.system .section-title .icon {
+	background-position:center -192px;
+}
+.admin .admin-main.icons32 .admin-workarea .section.help .section-title .icon {
+	background-position:center -224px;
+}
+.admin .admin-main.icons32 .admin-workarea .section.hasmode .section-inner .admin-data {
+	margin-left:59px;
+}
