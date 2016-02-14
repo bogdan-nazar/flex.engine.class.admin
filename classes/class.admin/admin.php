@@ -937,7 +937,7 @@ final class admin extends module
 		if(isset(self::$session["sectionOpts"]))self::$sectionOpts=self::$session["sectionOpts"];
 		if(isset(self::$session["content"]))self::$content=self::$session["content"];
 		if(isset(self::$session["module"]))self::$module=self::$session["module"];
-		if(self::accessGot("render"))self::_sectionSet(ADMIN_SECTION_LOGIN);
+		if(self::access("render"))self::_sectionSet(ADMIN_SECTION_LOGIN);
 	}
 
 	public static function _on2exec()
@@ -1014,7 +1014,8 @@ final class admin extends module
 			case ADMIN_SECTION_LOGIN:
 				if(self::action(self::$class."-login"))
 				{
-					if(self::access(self::post(self::$class."-login-name"),self::post(self::$class."-login-pass")))self::_sectionSet(ADMIN_SECTION_MODULES);
+					self::login(self::post(self::$class."-login-name"),self::post(self::$class."-login-pass"))
+					if(self::access("render"))self::_sectionSet(ADMIN_SECTION_MODULES);
 				}
 				break;
 			case ADMIN_SECTION_MEDIA:
@@ -1053,7 +1054,7 @@ final class admin extends module
 	public static function _on3render()
 	{
 		$siteName=self::config("","siteName");
-		if(!self::accessGot("render"))
+		if(!self::access("render"))
 		{
 			self::_renderLoginBox($siteName." Admin: доступ ограничен");
 			return;
@@ -1061,6 +1062,8 @@ final class admin extends module
 		$sectionTitle=self::$section["title"];
 		switch(self::$section["id"])
 		{
+			case ADMIN_SECTION_LOGIN:
+				return;
 			case ADMIN_SECTION_MODULES:
 				$sectionTitle="<span class=\"root\"".((self::$section["mode"]==ADMIN_MODE_EDIT)?" onclick=\"render.pluginGet('".self::$section["name"]."').list()\"":"").">Модули</span>".((self::$section["mode"]==ADMIN_MODE_EDIT)?(" :: ".(self::$module["id"]?self::$module["title"]:"Новый модуль")):"");
 				break;
