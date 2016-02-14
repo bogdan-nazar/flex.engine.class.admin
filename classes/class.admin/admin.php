@@ -31,6 +31,7 @@ define("ADMIN_SECTION_STAT",$i++,false);
 define("ADMIN_SECTION_SYSTEM",$i++,false);
 final class admin extends module
 {
+	private static $_step			=	0;
 	private static $c				=	NULL;
 	private static $config			=	array(
 		"content-optItemsOnPage"	=>	10,
@@ -931,26 +932,27 @@ final class admin extends module
 
 	public static function _on1init()
 	{
+		if(self::$_step)return;
+		self::$_step++;
 		self::$class=self::_class();
 		self::$session=self::sessionGet();
 		if(isset(self::$session["section"]))self::$section=self::$session["section"];
 		if(isset(self::$session["sectionOpts"]))self::$sectionOpts=self::$session["sectionOpts"];
 		if(isset(self::$session["content"]))self::$content=self::$session["content"];
 		if(isset(self::$session["module"]))self::$module=self::$session["module"];
-		if(self::access("render"))self::_sectionSet(ADMIN_SECTION_LOGIN);
+		if(!self::access("render"))self::_sectionSet(ADMIN_SECTION_LOGIN);
 	}
 
 	public static function _on2exec()
 	{
+		if(self::$_step!=1)return;
+		self::$_step++;
 		if(!self::silent())
 		{
 			self::resourceStyleAdd();
 			self::resourceScriptAdd();
 		}
-		if(!count(self::$section))
-		{
-			self::_sectionSet(false);
-		}
+		if(!count(self::$section))self::_sectionSet(false);
 		if(!self::$sectionOpts["loaded"])
 		{
 			self::$sectionOpts["loaded"]=true;
@@ -970,11 +972,14 @@ final class admin extends module
 				}
 			}
 		}
-		if(self::action(self::$class."-section-set"))
+		if(self::access("section-set"))
 		{
-			$id=0+self::post(self::$class."-section-id");
-			if(($id<ADMIN_SECTION_CONTENT) || ($id>ADMIN_SECTION_SYSTEM))$id=0;
-			self::_sectionSet($id);
+			if(self::action(self::$class."-section-set"))
+			{
+				$id=0+self::post(self::$class."-section-id");
+				if(($id<ADMIN_SECTION_CONTENT) || ($id>ADMIN_SECTION_SYSTEM))$id=0;
+				self::_sectionSet($id);
+			}
 		}
 		if(!self::$sections[self::$section["id"]]["hasmode"])self::$section["mode"]=ADMIN_MODE_VIEW;
 		switch(self::$section["id"])
@@ -1014,7 +1019,7 @@ final class admin extends module
 			case ADMIN_SECTION_LOGIN:
 				if(self::action(self::$class."-login"))
 				{
-					self::login(self::post(self::$class."-login-name"),self::post(self::$class."-login-pass"))
+					self::login(self::post(self::$class."-login-name"),self::post(self::$class."-login-pass"));
 					if(self::access("render"))self::_sectionSet(ADMIN_SECTION_MODULES);
 				}
 				break;
@@ -1053,23 +1058,21 @@ final class admin extends module
 
 	public static function _on3render()
 	{
+		if(self::$_step<2)return;
 		$siteName=self::config("","siteName");
-		if(!self::access("render"))
-		{
-			self::_renderLoginBox($siteName." Admin: доступ ограничен");
-			return;
-		}
-		$sectionTitle=self::$section["title"];
 		switch(self::$section["id"])
 		{
 			case ADMIN_SECTION_LOGIN:
+				self::_renderLoginBox($siteName." Admin: "._t("доступ ограничен"));
 				return;
 			case ADMIN_SECTION_MODULES:
 				$sectionTitle="<span class=\"root\"".((self::$section["mode"]==ADMIN_MODE_EDIT)?" onclick=\"render.pluginGet('".self::$section["name"]."').list()\"":"").">Модули</span>".((self::$section["mode"]==ADMIN_MODE_EDIT)?(" :: ".(self::$module["id"]?self::$module["title"]:"Новый модуль")):"");
 				break;
+			default:
+				$sectionTitle=self::$section["title"];
 		}
 		$t=tpl::get(self::$class,"main");
-		$t->setVar("siteName",self::config("","siteName"));
+		$t->setVar("siteName",$siteName);
 		$t->setVar("userName",self::accessData("name"));
 		$t->setVar("sectId",self::$section["id"]);
 		$t->setVar("sectHasMode",self::$section["hasmode"]?" hasmode":"");
